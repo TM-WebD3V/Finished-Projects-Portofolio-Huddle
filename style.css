@@ -1,0 +1,283 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  /* Colors */
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  /* Font Families */
+  --ff-Open-Sans: "Open Sans", sans-serif;
+  --ff-Poppins: "Poppins", sans-serif;
+  --Open-Sans-400: 400;
+  --Poppins-400: 400;
+  --Poppins-600: 600;
+}
+body {
+  background-color: var(--Violet);
+  background-image: url("./images/bg-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+/* helper classes */
+.clr-white {
+  color: white;
+}
+/* start */
+.logo {
+  margin: 3em 0 min(7em, 10vw) min(8.5em, 5vw);
+}
+
+.logo img {
+  width: min(14rem, 18vw);
+}
+
+.title {
+  font-family: var(--ff-Poppins);
+  font-weight: var(--Poppins-600);
+  max-width: 20ch;
+  line-height: 1.4;
+  margin-block-end: 1rem;
+  font-size: min(3rem, 3vw);
+  margin-block-start: min(4rem, 1vw);
+}
+.info {
+  font-family: var(--ff-Open-Sans);
+  font-weight: var(--Open-Sans-400);
+  font-size: min(1.1rem, 1.5vw);
+  color: hsl(0 0% 100%/0.9);
+  max-width: min(50ch, 40vw);
+  margin-bottom: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-inline-start: min(8.5rem, 5vw);
+  gap: 3rem;
+}
+
+.flex-container > * {
+  flex: 1;
+}
+
+.flex-img-container {
+  width: max(55rem, 100vw);
+}
+
+.flex-img-container img {
+  width: max(55rem, 100vw);
+}
+.register {
+  text-align: center;
+  padding-inline: min(3.5em, 6vw);
+  padding-block: min(0.7em, 0.5vw);
+  border-radius: 3em;
+  border: none;
+  background-color: white;
+  font-family: var(--ff-Poppins);
+  font-weight: var(--Poppins-400);
+  font-size: min(1.3rem, 4vw);
+}
+
+.register:hover {
+  cursor: pointer;
+  background-color: var(--Soft-Magenta);
+  box-shadow: 0px 0px 3px black;
+}
+a:active,
+a:link {
+  color: var(--Violet);
+  text-decoration: none;
+}
+.register a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.socials-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 4vw;
+  gap: 1rem;
+}
+
+.socials-flex-container i {
+  border-radius: 100%;
+  border: 1px solid white;
+}
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+  color: white;
+  font-size: 1.125rem;
+  background-color: none;
+  padding: 0.5em;
+  text-align: center;
+}
+footer {
+  margin-top: 5rem;
+}
+.socials-flex-container i:hover,
+.socials-flex-container i:focus {
+  color: var(--Soft-Magenta);
+  cursor: pointer;
+  border: 1px solid var(--Soft-Magenta);
+}
+.frontendmentor {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-image: url("./images/bg-mobile.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: min(10rem, 80vw);
+  }
+  .flex-img-container {
+    width: min(40rem, 70vw);
+  }
+  .flex-img-container img {
+    width: min(40rem, 70vw);
+  }
+  .title {
+    font-size: min(2.5rem, 7vw);
+    text-align: center;
+  }
+
+  .info {
+    font-size: min(1rem, 4vw);
+    max-width: 45ch;
+    text-align: center;
+  }
+
+  .flex-text-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .socials-flex-container {
+    justify-content: center;
+    margin-inline: min(3rem, 5vw) 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .flex-container {
+    gap: 2rem;
+  }
+  .logo {
+    max-width: 7rem;
+  }
+  .logo img {
+    max-width: 7rem;
+    margin: 2rem;
+  }
+  .flex-container {
+    margin: 0;
+  }
+  .flex-img-container {
+    max-width: 20rem;
+  }
+  .fa-facebook,
+  .fa-instagram,
+  .fa-twitter {
+    color: white;
+    font-size: 1rem;
+    background-color: none;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .socials-flex-container {
+    margin: 0;
+  }
+  .register {
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+  }
+}
