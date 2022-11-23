@@ -280,11 +280,10 @@ footer {
     padding-inline: 2rem;
     padding-block: 0.5rem;
   }
-
-  a:link {
+  .frontendmentor > a:link {
     color: white;
   }
-  a:visited {
-    color: yellow;
+  .frontendmentor > a:visited {
+    color: white;
   }
 }
