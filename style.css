@@ -252,10 +252,10 @@ footer {
     gap: 2rem;
   }
   .logo {
-    max-width: 7rem;
+    width: 7rem;
   }
   .logo img {
-    max-width: 7rem;
+    width: 100%;
     margin: 2rem;
   }
   .flex-container {
@@ -279,5 +279,12 @@ footer {
   .register {
     padding-inline: 2rem;
     padding-block: 0.5rem;
+  }
+
+  a:link {
+    color: white;
+  }
+  a:visited {
+    color: yellow;
   }
 }
