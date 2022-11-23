@@ -262,8 +262,12 @@ footer {
     margin: 0;
   }
   .flex-img-container {
-    max-width: 20rem;
+    width: 20rem;
   }
+  .flex-img-container img {
+    width: 100%;
+  }
+
   .fa-facebook,
   .fa-instagram,
   .fa-twitter {
@@ -281,9 +285,9 @@ footer {
     padding-block: 0.5rem;
   }
   .frontendmentor > a:link {
-    color: white;
+    color: black;
   }
   .frontendmentor > a:visited {
-    color: white;
+    color: yellow;
   }
 }
